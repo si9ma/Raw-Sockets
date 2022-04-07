@@ -49,7 +49,7 @@ uint32_t fetch_interface_ip(uint32_t if_index)
 	switch (family = ifreq.ifr_addr.sa_family)
 	{
 	case AF_UNSPEC:
-		return; /* ignore */
+		return src_addr; /* ignore */
 	case AF_INET:
 	case AF_INET6:
 		getnameinfo(&ifreq.ifr_addr, sizeof ifreq.ifr_addr, host, sizeof host,

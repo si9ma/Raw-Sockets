@@ -1013,7 +1013,7 @@ int receive_data(char* buffer, int buffer_len)
 
 	while (buffer_len > 0)
 	{
-		get_wait_time(&timeToWait, 5);
+		get_wait_time(&timeToWait, 15);
 
 		pthread_mutex_lock(&tcp_state.recv_info.tcp_recv_lock);
 		if (tcp_state.recv_info.recv_buffer_head
